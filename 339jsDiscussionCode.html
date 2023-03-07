@@ -26,13 +26,13 @@
 
 
 			// 2. Update the three span elements using ONLY JavaScript
-			document.getElementsByTagName("span")[0].innerHTML = window.location.href;
-			document.getElementsByTagName("span")[1].innerHTML = document.getElementsByTagName("li").length;
-			document.getElementsByTagName("span")[2].innerHTML = new Date();
+			document.querySelector("#URL").innerHTML = window.location.href;
+			document.querySelector("#items").innerHTML = document.getElementsByTagName("li").length;
+			document.querySelector("#time").innerHTML = new Date();
 
 
 			// 3. Change the background color and margin for the entire page.
-			document.body.style.backgroundColor = "orange";
+			document.body.style.backgroundColor = "#FF0000";
 			document.body.style.margin = "5%";
 
 
@@ -45,7 +45,7 @@
 		function copyFunction() {
 			let cheer = document.getElementById("cheer");
 			let cheerText = cheer.innerHTML;
-			cheerText += "Go Blue<br>";
+			cheerText += "<br>Go Blue";
 			cheer.innerHTML = cheerText;
 		}
 
@@ -81,5 +81,8 @@
 	</div>
 
 </body>
+<script>
+	displayInformation();
+</script>
 
 </html>
